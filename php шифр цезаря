@@ -1,0 +1,23 @@
+<?php 
+$alf = range ( 'A', 'Z');//создает массив, содержащий диапазон элементов
+$text = 'HOM';// текст
+ $arr = str_split ($text);//преобразует строку в массив
+ 
+ // шифратор
+ foreach ($arr as $key => $val)// обработка массива
+ {
+	 $key  = array_search ($val, $alf);// поиск значения в  массиве
+	 $y = $alf[($key+3)%26];
+	 echo "$key => $val => $key => $y", "<br>";
+ }
+
+ // дешифратор
+ foreach ($arr as $key => $val)// обработка массива
+ {
+	 $key  = array_search ($val, $alf);// поиск значения в  массиве
+	 $x = $alf[($key+3-3)%26];
+	 echo "$key => $val => $x", "<br>";
+ }
+ 
+ 
+?>
